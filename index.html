@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>тут был марик</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            transition: background-color 0.5s;
-        }
-        #playButton {
-            font-size: 48px;
-            padding: 100px 400px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        #playButton:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Музыкальная Кнопка</title>
+  <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          transition: background-color 0.5s;
+      }
+      #playButton {
+          font-size: 48px;
+          padding: 100px 400px;
+          cursor: pointer;
+          background-color: black; /* Изменен цвет кнопки на черный */
+          color: white;
+          border: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+      }
+      #playButton:hover {
+          background-color: #333; /* Темнее при наведении */
+      }
+  </style>
 </head>
 <body>
-    <button id="playButton">Играть Песню</button>
-    <audio id="audio" src="12345.mp3"></audio>
-    <script>
-        const button = document.getElementById('playButton');
-        const audio = document.getElementById('audio');
+  <button id="playButton">🎵</button> <!-- Изменен текст кнопки на эмодзи -->
+  <audio id="audio" src="12345.mp3"></audio>
+  <script>
+      const button = document.getElementById('playButton');
+      const audio = document.getElementById('audio');
 
-        button.addEventListener('click', () => {
-            audio.play();
-            document.body.style.backgroundColor = getRandomColor();
-        });
+      button.addEventListener('click', () => {
+          audio.play();
+          document.body.style.backgroundColor = getRandomColor();
+      });
 
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-    </script>
+      function getRandomColor() {
+          const letters = '0123456789ABCDEF';
+          let color = '#';
+          for (let i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+      }
+  </script>
 </body>
 </html>
